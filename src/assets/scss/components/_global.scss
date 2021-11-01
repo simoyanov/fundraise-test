@@ -23,7 +23,7 @@ body {
 
 .card-body {
     padding: 28px $card-spacer-x;
-    padding-top: 28px;
+    padding-top: 26px;
 }
 
 .card-header {}
@@ -36,21 +36,22 @@ body {
     background-image: url(../img/copy.svg);
     display: inline-block;
     cursor: pointer;
+        vertical-align: sub;
 }
 
 .details {
     .card-body {
-        padding-top: 24px;
+        padding-top: 22px;
         padding-bottom: 24px;
     }
     .card-footer {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     &__des {
         font-weight: normal;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 22px;
         //        padding-left: 26px;
         position: relative;
         &:before {
@@ -61,6 +62,7 @@ body {
             background-image: url(../img/dollar-sign.svg);
             margin-right: 8px;
             vertical-align: middle;
+            margin-top: -1px;
         }
     }
     &__summary {
@@ -68,6 +70,7 @@ body {
         line-height: 24px;
         /* gray-80 */
         color: #6C6D6F;
+        margin-top: 3px;
         span {
             font-weight: normal;
             font-size: 24px;
@@ -75,32 +78,40 @@ body {
             /* identical to box height, or 133% */
             /* Focused (logo color) */
             color: $green;
+            margin-right: 3px;
         }
     }
     &__id {
         font-family: 'Source Code Pro', monospace;
+        margin-right: -2px;
+        font-size: 16px;
+line-height: 24px;
         &__title {
             text-transform: uppercase;
         }
-        &__value {}
+        &__value {
+            line-height: 26px;
+        }
     }
     &__info {
         &__item {
             font-size: 16px;
-            line-height: 24px;
-            padding-left: 30px;
-            padding-right: 30px;
+            line-height: 26px;
+            padding-left: 32px;
+            padding-right: 32px;
             border-right: 1px solid #D7D8DA;
             &:first-child {
                 padding-left: 0;
+                padding-right: 34px;
             }
             &:last-child {
                 padding-right: 0;
                 border-right: none;
+                padding-left: 30px;
             }
             &__title {
                 font-size: 14px;
-                line-height: 20px;
+                line-height: 21px;
                 /* identical to box height, or 143% */
                 /* gray-80 */
                 color: #6C6D6F;
@@ -119,6 +130,7 @@ body {
                         display: inline-block;
                         background-image: url(../img/check.svg);
                         margin-right: 8px;
+                        vertical-align: middle;
                     }
                 }
             }
@@ -134,14 +146,17 @@ body {
     .nav-link {
         font-weight: 600;
         font-size: 12px;
-        line-height: 20px;
+        line-height: 16px;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #2F2F30;
         padding-top: 14px;
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-bottom: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 13px;
+            border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+        
         &.active {
             color: $green;
         }
@@ -153,12 +168,35 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     .form-group {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-bottom: 24px;
         label:first-child {
             width: 124px;
             text-align: right;
             margin-right: 16px;
+            font-size: 16px;
+line-height: 24px;
+            margin-bottom: 0;
+            
+        }
+        
+        &.input-group{
+            label:first-child {
+                line-height: 40px;
+            }
+        }
+        
+        &.range-group{
+//            margin-bottom: 18px;
+            label,output {
+                line-height: 24px;
+                margin-bottom: 0;
+            }
+        }
+        
+        &:last-child{
+            margin-bottom: 0;
         }
     }
 }
@@ -171,6 +209,7 @@ a.list-group-item {
     line-height: 26px;
     &>img {
         vertical-align: text-top;
+        margin-right: 1px;
     }
     &.active {
         background: #F3F3F3;
@@ -186,8 +225,8 @@ a.list-group-item {
     input {
         background-image: url(../img/search.svg);
         background-repeat: no-repeat;
-        background-position: 16px center;
-        padding-left: 42px;
+        background-position: 14px center;
+        padding-left: 40px;
     }
 }
 
@@ -229,17 +268,52 @@ h4 {
 
 .tabs {
     .card-body {
-        padding-top: 32px;
+        padding-top: 31px;
+        padding-bottom: 40px;
+    }
+    .card-footer{
+        .btn{
+            margin-right: 10px;
+        }
     }
 }
 
 .custom-select {
     background-image: url(../img/arr-down.svg);
     background-size: 24px;
+    width: auto;
+    
+        border-radius: 6px !important;
+    line-height: 24px;
+
+    height: calc(1.5em + 0.75rem + 3px);
+    background-position: right 0.2rem center;
+    &.full-select{
+            width: 296px;
+        flex: none;
+    }
     &.clear-select {
         border: none;
         background-color: transparent;
         appearance: none;
+        background-position: right 0.75rem center;
+    }
+}
+
+.form-control{
+    border-radius: 6px;
+    line-height: 24px;
+
+    height: calc(1.5em + 0.75rem + 3px);
+}
+
+.currency-group{
+    .currency-input{
+        width: 192px;
+        margin-right:24px; 
+    }
+    .currency-select{
+            width: 80px;
     }
 }
 
@@ -253,7 +327,7 @@ input[type="checkbox"] {
     &:not(:checked) + label {
         display: inline-block;
         position: relative;
-        padding-left: 28px;
+        padding-left: 36px;
         line-height: 20px;
         cursor: pointer;
         &:before {
@@ -304,14 +378,14 @@ input[type="radio"] {
     &:not(:checked) + label {
         display: inline-block;
         position: relative;
-        padding-left: 28px;
+        padding-left: 36px;
         line-height: 20px;
         cursor: pointer;
         &:before {
             content: "";
             position: absolute;
             left: 0px;
-            top: 0px;
+            top: -2px;
             width: 24px;
             height: 24px;
             border: 1px solid #A9ABAE;
@@ -324,7 +398,7 @@ input[type="radio"] {
             position: absolute;
             transition: all 0.2s ease;
             left: 6px;
-    top: 6px;
+    top: 4px;
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -345,14 +419,24 @@ input[type="radio"] {
 
 .form-check{
     padding-left: 0;
+    margin-bottom: 16px;
+    &:last-child{
+        margin-top: 24px;
+        margin-bottom: 8px;
+        input[type=checkbox]:checked+label, input[type=checkbox]:not(:checked)+label{
+            line-height: 24px;
+        }
+    }
 }
 
-
+.range-group{
+//    margin-top: 10px;
+}
 .btn{
     font-size: 16px;
-line-height: 24px;
+line-height: 22px;
     color: #2F2F30;
-    padding: 12px 24px;
+    padding: 12px 23px;
     background: #FFFFFF;
 /* gray-70 */
 
@@ -362,6 +446,7 @@ border-radius: 8px;
     &.btn-primary{
         background: #2EB670;
         color: #fff;
+        border-radius: 6px;
         border-color: $green;
     }
 }

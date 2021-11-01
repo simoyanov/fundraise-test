@@ -4,13 +4,14 @@ input[type="range"] {
     display: inline-block;
   -webkit-appearance: none;
   margin-right: 15px;
-  width: 200px;
+  width: 218px;
   height: 3px;
   background: rgb(219, 220, 222);
   border-radius: 5px;
   background-image: linear-gradient(#2EB670, #2EB670);
   background-size: 70% 100%;
   background-repeat: no-repeat;
+    vertical-align: middle;
 }
 
 /* Input Thumb */

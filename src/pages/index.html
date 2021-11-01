@@ -85,17 +85,17 @@
                   <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="behavior" role="tabpanel" aria-labelledby="behavior-tab">
                         <form>
-                            <div class="form-group row">
+                            <div class="form-group input-group row">
                                 <label for="formDesignation">Designation</label>
-                                <div>
-                                    <select class="custom-select" id="formDesignation">
+<!--                                <div>-->
+                                    <select class="custom-select full-select" id="formDesignation">
                                         <option selected value="1">Match Checkout Setting</option>
                                         <option value="2">Option 2</option>
                                         <option value="3">Option 3</option>
                                       </select>
-                                </div>
+<!--                                </div>-->
                             </div>
-                            <div class="form-group row currency-group" >
+                            <div class="form-group input-group row currency-group" >
                                 <label for="formGoal">Goal</label>
                                 <div>
                                      
@@ -132,27 +132,28 @@
                                       </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group range-group row">
                                 <label for="formBorderSize">Border size</label>
                                 <div>
                                 
                                 
-                                <input class="form-control-range" id="formBorderSize" type="range" value="70" min="0" max="100" oninput="formBorderSizeValue.value=value"/>
-                                <output id="formBorderSizeValue">70</output>
+                                <input class="form-control-range" id="formBorderSize" type="range" value="2" min="0" max="3" oninput="formBorderSizeValue.value=value"/>
+                                
                                 </div>
+                                <output id="formBorderSizeValue">2</output>
                                 <label for="">px</label>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group range-group row">
                                 <label for="formBorderRadiusRange">Border radius</label>
                                 
                                 
                                 <div>
                                 
                                 
-                                <input class="form-control-range" id="formBorderRadiusRange" type="range" value="15" min="0" max="100" oninput="formBorderRadiusRangeValue.value=value"/>
-                                <output id="formBorderRadiusRangeValue">15</output>
-                                </div>
+                                <input class="form-control-range" id="formBorderRadiusRange" type="range" value="15" min="0" max="20" oninput="formBorderRadiusRangeValue.value=value"/>
                                 
+                                </div>
+                                <output id="formBorderRadiusRangeValue">15</output>
                                 <label for="">px</label>
                             </div>
                         </form>
