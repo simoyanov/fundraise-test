@@ -43,7 +43,7 @@ body {
         padding-top: 24px;
         padding-bottom: 24px;
     }
-    .card-footer{
+    .card-footer {
         padding-top: 16px;
         padding-bottom: 16px;
     }
@@ -112,13 +112,13 @@ body {
             &__status {
                 &.success {
                     color: $green;
-                    &:before{
+                    &:before {
                         content: '';
-            width: 18px;
-            height: 18px;
-            display: inline-block;
-            background-image: url(../img/check.svg);
-            margin-right: 8px;
+                        width: 18px;
+                        height: 18px;
+                        display: inline-block;
+                        background-image: url(../img/check.svg);
+                        margin-right: 8px;
                     }
                 }
             }
@@ -138,12 +138,10 @@ body {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #2F2F30;
-        
-            padding-top: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 12px;
-        
+        padding-top: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 12px;
         &.active {
             color: $green;
         }
@@ -169,8 +167,8 @@ a.list-group-item {
     cursor: pointer;
     padding: 12px 16px;
     font-size: 16px;
-line-height: 26px;
-    &>img{
+    line-height: 26px;
+    &>img {
         vertical-align: text-top;
     }
     &.active {
@@ -197,11 +195,11 @@ line-height: 26px;
     padding-bottom: 16px;
     .has-search {
         width: 336px;
-        margin-right: 40px;
+        margin-right: 28px;
         margin-bottom: 0;
     }
     .input-group {
-        width: 116px;
+        width: 138px;
     }
 }
 
@@ -221,12 +219,23 @@ h4 {
     }
 }
 
-.sidebar-menu{
+.sidebar-menu {
     max-width: 288px;
 }
 
-.tabs{
+.tabs {
     .card-body {
-	padding-top: 32px;
+        padding-top: 32px;
+    }
 }
+
+.custom-select {
+    background-image: url(../img/arr-down.svg);
+        background-size: 24px;
+    &.clear-select {
+        border: none;
+        background-color: transparent;
+        appearance: none;
+        
+    }
 }
