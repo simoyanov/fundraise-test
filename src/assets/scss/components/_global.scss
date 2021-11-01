@@ -149,6 +149,7 @@ body {
 }
 
 .tab-content>.tab-pane {
+    padding-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
     .form-group {
@@ -342,3 +343,25 @@ input[type="radio"] {
     }
 }
 
+.form-check{
+    padding-left: 0;
+}
+
+
+.btn{
+    font-size: 16px;
+line-height: 24px;
+    color: #2F2F30;
+    padding: 12px 24px;
+    background: #FFFFFF;
+/* gray-70 */
+
+border: 1px solid #A9ABAE;
+box-sizing: border-box;
+border-radius: 8px;
+    &.btn-primary{
+        background: #2EB670;
+        color: #fff;
+        border-color: $green;
+    }
+}
