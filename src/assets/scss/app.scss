@@ -7,7 +7,7 @@ $card-spacer-x: 32px !default;
 
 $grid-gutter-width:           24px !default;
 
-$track-color: #2EB670 !default;
+$track-color: #DBDCDE !default;
 $thumb-color: #2EB670 !default;
 
 $thumb-radius: 9.5px !default;
@@ -36,9 +36,9 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 //Bootstrap styles 
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/input-range-scss/inputrange";
 //@import "node_modules/input-range-scss/inputrange";
-//@import "components/inputrange";
+//@import "node_modules/input-range-scss/inputrange";
+@import "components/inputrange";
 
 
 
