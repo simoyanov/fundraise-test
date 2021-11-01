@@ -13,8 +13,15 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     minify = require('gulp-minify'),
     cssnano = require('gulp-cssnano'),
+    concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer');
 
+var path = {
+    js:[
+        'node_modules/inputmask/dist/inputmask.js',
+        'src/assets/js/app.js'
+    ]
+}
 
 // ------------ Development Tasks -------------
 // Compile Sass into CSS
@@ -97,10 +104,10 @@ gulp.task('font', function () {
 
 // Concatenating js files
 gulp.task('scripts', function () {
-    return gulp.src('src/assets/js/app.js')
+    return gulp.src(path.js)
         .pipe(sourcemaps.init())
         //If concatenating more than one JS file
-        //.pipe(concat('app.js'))
+        .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(minify())
         .pipe(gulp.dest('dist/assets/js/'))

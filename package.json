@@ -46,6 +46,7 @@
     "gulp-rename": "^1.2.2",
     "handlebars": "^4.0.10",
     "input-range-scss": "^1.5.2",
+    "inputmask": "^5.0.6",
     "jquery": "^3.2.1",
     "mappy-breakpoints": "^0.2.3",
     "popper.js": "^1.12.5",

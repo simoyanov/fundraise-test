@@ -95,16 +95,19 @@
                                       </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row currency-group" >
                                 <label for="formGoal">Goal</label>
                                 <div>
-                                    <!-- <div class="input-group-prepend">
-                                      <span class="input-group-text">$</span>
-                                      <span class="input-group-text">0.00</span>
-                                    </div> -->
-                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                     
+                                    <input type="text" class="form-control currency-input" aria-label="Amount (to the nearest dollar)" value="" data-inputmask="" default-value="10">
                                   </div>
+                                  <div>
+                                    <select class="custom-select currency-select" id="formCurrency">
+                                        <option selected value="usd">USD</option>
+                                        <option value="eur">EUR</option>
+                                        
+                                      </select>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="formDefaultAmount">Default Amount</label>
@@ -170,7 +173,7 @@
         </div>
     </div>    
     <div class="col sidebar-menu">
-        <div class="card" style="">
+        <div class="card sticky-top" style="">
             <div class="list-group list-group-flush">
               <a class="list-group-item"><img src="assets/img/repeat.svg" alt="">    Change Amount</a>
               <a class="list-group-item"><img src="assets/img/wallet.svg" alt=""> Change Payment Method</a>
