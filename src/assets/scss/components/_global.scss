@@ -24,11 +24,20 @@ body {
 .card-body {
     padding: 28px $card-spacer-x;
     padding-top: 26px;
+    @media (max-width: 575.98px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 .card-header {}
 
-.card-footer {}
+.card-footer {
+    @media (max-width: 575.98px) { 
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
 
 .copy-btn {
     width: 18px;
@@ -36,7 +45,7 @@ body {
     background-image: url(../img/copy.svg);
     display: inline-block;
     cursor: pointer;
-        vertical-align: sub;
+    vertical-align: sub;
 }
 
 .details {
@@ -85,12 +94,20 @@ body {
         font-family: 'Source Code Pro', monospace;
         margin-right: -2px;
         font-size: 16px;
-line-height: 24px;
+        line-height: 24px;
+        @media (max-width: 575.98px) {
+            display: flex;
+        }
+        
         &__title {
             text-transform: uppercase;
         }
         &__value {
             line-height: 26px;
+            @media (max-width: 575.98px) {
+                line-height: 24px;
+                margin-left: 12px;
+            }
         }
     }
     &__info {
@@ -99,15 +116,32 @@ line-height: 24px;
             line-height: 26px;
             padding-left: 32px;
             padding-right: 32px;
-            border-right: 1px solid #D7D8DA;
+            @media (min-width: 768px) {
+                border-right: 1px solid #D7D8DA;
+                
+            }
+            
+            @media (max-width: 575.98px) {
+                display: flex;
+                padding-left: 0;
+                padding-right: 0;
+            }
             &:first-child {
                 padding-left: 0;
                 padding-right: 34px;
+                @media (max-width: 575.98px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
             }
             &:last-child {
                 padding-right: 0;
                 border-right: none;
                 padding-left: 30px;
+                @media (max-width: 575.98px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
             }
             &__title {
                 font-size: 14px;
@@ -115,6 +149,10 @@ line-height: 24px;
                 /* identical to box height, or 143% */
                 /* gray-80 */
                 color: #6C6D6F;
+                @media (max-width: 575.98px) {
+                    width: 100px;
+                    padding-right: 12px;
+                }
             }
             a {
                 color: #6665DD;
@@ -139,8 +177,8 @@ line-height: 24px;
 }
 
 .nav-tabs {
-    margin-left: -32px;
-    margin-right: -32px;
+    //    margin-left: -32px;
+    //    margin-right: -32px;
     padding-left: 24px;
     padding-right: 24px;
     .nav-link {
@@ -154,9 +192,8 @@ line-height: 24px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 13px;
-            border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-        
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
         &.active {
             color: $green;
         }
@@ -167,35 +204,55 @@ line-height: 24px;
     padding-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: 575.98px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .form-group {
         padding-left: 24px;
         padding-right: 24px;
         margin-bottom: 24px;
+        @media (max-width: 575.98px) {
+        padding-left: 12px;
+    padding-right: 12px;
+            display: block;
+    }
         label:first-child {
             width: 124px;
             text-align: right;
             margin-right: 16px;
             font-size: 16px;
-line-height: 24px;
+            line-height: 24px;
             margin-bottom: 0;
             
+            @media (max-width: 575.98px) {
+                width: auto;
+                display: block;
+                text-align: left;
+                margin-bottom: 6px;
+                line-height: 40px;
+            }
+            
         }
-        
-        &.input-group{
+        &.input-group {
             label:first-child {
                 line-height: 40px;
             }
         }
-        
-        &.range-group{
-//            margin-bottom: 18px;
-            label,output {
+        &.range-group {
+            //            margin-bottom: 18px;
+            label,
+            output {
                 line-height: 24px;
                 margin-bottom: 0;
             }
+            @media (max-width: 575.98px) {
+                &>div{
+                    display: inline-block;
+                }
+            }
         }
-        
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
     }
@@ -234,8 +291,10 @@ a.list-group-item {
     padding-top: 16px;
     padding-bottom: 16px;
     .has-search {
+        @media (min-width: 768px) {
         width: 336px;
-        margin-right: 28px;
+            margin-right: 28px;
+        }
         margin-bottom: 0;
     }
     .input-group {
@@ -260,9 +319,14 @@ h4 {
 }
 
 .sidebar-menu {
-    max-width: 288px;
-    .card{
+    
+    @media (min-width: 992px) {
+        max-width: 288px;
+    }
+    .card {
         top: 24px;
+        position: sticky;
+        z-index: 1020;
     }
 }
 
@@ -270,10 +334,44 @@ h4 {
     .card-body {
         padding-top: 31px;
         padding-bottom: 40px;
+        //        min-width: 640px;
     }
-    .card-footer{
-        .btn{
+    .card-footer {
+        .btn {
             margin-right: 10px;
+        }
+    }
+    // Responsive Bootstrap Tabs without JS
+    .tabbable-responsive {
+        display: block;
+        min-width: 100%;
+        overflow-x: auto;
+        // Some tweaks for card-header
+        //  margin: 0px -21px -13px -21px;
+        margin-left: -32px;
+        margin-right: -32px;
+        @media (max-width: 575.98px) {
+            margin-left: -24px;
+        margin-right: -24px;
+        }
+    }
+    .tabbable {
+        min-width: 100%;
+        .nav-tabs {
+            white-space: nowrap;
+            display: inline-block;
+            min-width: 100%;
+            // Some tweaks for card-header
+            //      padding: 0px 21px;
+            .nav-item {
+                display: inline-block;
+                &:not(:first-child) {
+                    margin-left: -5px;
+                }
+                .nav-link {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
@@ -282,15 +380,16 @@ h4 {
     background-image: url(../img/arr-down.svg);
     background-size: 24px;
     width: auto;
-    
-        border-radius: 6px !important;
+    border-radius: 6px !important;
     line-height: 24px;
-
     height: calc(1.5em + 0.75rem + 3px);
     background-position: right 0.2rem center;
-    &.full-select{
-            width: 296px;
+    &.full-select {
+        width: 296px;
         flex: none;
+        @media (max-width: 575.98px) {
+            width: 100%;
+        }
     }
     &.clear-select {
         border: none;
@@ -300,20 +399,28 @@ h4 {
     }
 }
 
-.form-control{
+.form-control {
     border-radius: 6px;
     line-height: 24px;
-
     height: calc(1.5em + 0.75rem + 3px);
 }
 
-.currency-group{
-    .currency-input{
+.currency-group {
+    .currency-input {
         width: 192px;
-        margin-right:24px; 
+        margin-right: 24px;
+        @media (max-width: 575.98px) {
+//            margin-right: 12px;
+            width: 167px;
+        }
     }
-    .currency-select{
-            width: 80px;
+    .currency-select {
+        width: 80px;
+    }
+    @media (max-width: 575.98px) {
+        &>div{
+            display: inline-block;
+        }
     }
 }
 
@@ -341,33 +448,31 @@ input[type="checkbox"] {
             background-color: #ffffff;
             border-radius: 4px;
         }
-        &:after{
+        &:after {
             content: "";
             position: absolute;
             transition: all 0.2s ease;
             background-image: url(../img/checkbox.svg);
-                background-repeat: no-repeat;
-    background-position: center;
+            background-repeat: no-repeat;
+            background-position: center;
             left: 0px;
-    top: 0px;
-    width: 24px;
-    height: 24px;
-    
-            
-            
+            top: 0px;
+            width: 24px;
+            height: 24px;
         }
     }
-    &:checked + label:after{
+    &:checked + label:after {
         opacity: 1;
     }
-    &:not(:checked) + label:after{
+    &:not(:checked) + label:after {
         opacity: 0;
     }
-     &:checked + label:before{
+    &:checked + label:before {
         border-width: 2px;
         border-color: $green;
     }
 }
+
 input[type="radio"] {
     &:checked,
     &:not(:checked) {
@@ -392,61 +497,70 @@ input[type="radio"] {
             background-color: #ffffff;
             border-radius: 100%;
         }
-        
-        &:after{
+        &:after {
             content: "";
             position: absolute;
             transition: all 0.2s ease;
             left: 6px;
-    top: 4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    background-color: $green;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background-color: $green;
         }
     }
-    &:checked + label:before{
+    &:checked + label:before {
         border-width: 2px;
         border-color: $green;
     }
-    &:checked + label:after{
+    &:checked + label:after {
         opacity: 1;
     }
-    &:not(:checked) + label:after{
+    &:not(:checked) + label:after {
         opacity: 0;
     }
 }
 
-.form-check{
+.form-check {
     padding-left: 0;
     margin-bottom: 16px;
-    &:last-child{
+    &:last-child {
         margin-top: 24px;
         margin-bottom: 8px;
-        input[type=checkbox]:checked+label, input[type=checkbox]:not(:checked)+label{
+        input[type=checkbox]:checked+label,
+        input[type=checkbox]:not(:checked)+label {
             line-height: 24px;
         }
     }
 }
 
-.range-group{
-//    margin-top: 10px;
+.range-group {
+    //    margin-top: 10px;
 }
-.btn{
+
+.btn {
     font-size: 16px;
-line-height: 22px;
+    line-height: 22px;
     color: #2F2F30;
     padding: 12px 23px;
     background: #FFFFFF;
-/* gray-70 */
-
-border: 1px solid #A9ABAE;
-box-sizing: border-box;
-border-radius: 8px;
-    &.btn-primary{
+    /* gray-70 */
+    border: 1px solid #A9ABAE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    &.btn-primary {
         background: #2EB670;
         color: #fff;
         border-radius: 6px;
         border-color: $green;
+    }
+}
+
+.list-group {
+	@media (min-width: 768px) and (max-width: 991.98px) {
+//        flex-direction: row;
+        .list-group-item{
+//            white-space: nowrap;
+        }
     }
 }

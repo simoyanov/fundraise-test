@@ -12,6 +12,9 @@ input[type="range"] {
   background-size: 70% 100%;
   background-repeat: no-repeat;
     vertical-align: middle;
+    @media (max-width: 575.98px) {
+        
+    }
 }
 
 /* Input Thumb */
