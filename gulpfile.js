@@ -34,7 +34,7 @@ gulp.task('sass', function () {
             sourceMap: 'sass',
             outputStyle: 'nested'
         }).on('error', sass.logError))
-        .pipe(autoprefixer('last 2 versions'))
+        .pipe(autoprefixer('last 25 versions'))
         .pipe(cssnano()) // Use cssnano to minify CSS
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest("dist/assets/css"))
