@@ -3,4 +3,4 @@
 npm install
 gulp 
 
-- [Link to page]()
+- [Link to page](https://simoyanov.github.io/fundraise-test/dist/)
