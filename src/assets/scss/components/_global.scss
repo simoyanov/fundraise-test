@@ -33,7 +33,7 @@ body {
 .card-header {}
 
 .card-footer {
-    @media (max-width: 575.98px) { 
+    @media (max-width: 575.98px) {
         padding-left: 24px;
         padding-right: 24px;
     }
@@ -98,7 +98,6 @@ body {
         @media (max-width: 575.98px) {
             display: flex;
         }
-        
         &__title {
             text-transform: uppercase;
         }
@@ -118,9 +117,7 @@ body {
             padding-right: 32px;
             @media (min-width: 768px) {
                 border-right: 1px solid #D7D8DA;
-                
             }
-            
             @media (max-width: 575.98px) {
                 display: flex;
                 padding-left: 0;
@@ -213,10 +210,10 @@ body {
         padding-right: 24px;
         margin-bottom: 24px;
         @media (max-width: 575.98px) {
-        padding-left: 12px;
-    padding-right: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
             display: block;
-    }
+        }
         label:first-child {
             width: 124px;
             text-align: right;
@@ -224,7 +221,6 @@ body {
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 0;
-            
             @media (max-width: 575.98px) {
                 width: auto;
                 display: block;
@@ -232,7 +228,6 @@ body {
                 margin-bottom: 6px;
                 line-height: 40px;
             }
-            
         }
         &.input-group {
             label:first-child {
@@ -247,7 +242,7 @@ body {
                 margin-bottom: 0;
             }
             @media (max-width: 575.98px) {
-                &>div{
+                &>div {
                     display: inline-block;
                 }
             }
@@ -292,7 +287,7 @@ a.list-group-item {
     padding-bottom: 16px;
     .has-search {
         @media (min-width: 768px) {
-        width: 336px;
+            width: 336px;
             margin-right: 28px;
         }
         margin-bottom: 0;
@@ -319,7 +314,6 @@ h4 {
 }
 
 .sidebar-menu {
-    
     @media (min-width: 992px) {
         max-width: 288px;
     }
@@ -327,6 +321,9 @@ h4 {
         top: 24px;
         position: sticky;
         z-index: 1020;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            top: auto;
+        }
     }
 }
 
@@ -352,7 +349,7 @@ h4 {
         margin-right: -32px;
         @media (max-width: 575.98px) {
             margin-left: -24px;
-        margin-right: -24px;
+            margin-right: -24px;
         }
     }
     .tabbable {
@@ -410,7 +407,7 @@ h4 {
         width: 192px;
         margin-right: 24px;
         @media (max-width: 575.98px) {
-//            margin-right: 12px;
+            //            margin-right: 12px;
             width: 167px;
         }
     }
@@ -418,7 +415,7 @@ h4 {
         width: 80px;
     }
     @media (max-width: 575.98px) {
-        &>div{
+        &>div {
             display: inline-block;
         }
     }
@@ -557,10 +554,10 @@ input[type="radio"] {
 }
 
 .list-group {
-	@media (min-width: 768px) and (max-width: 991.98px) {
-//        flex-direction: row;
-        .list-group-item{
-//            white-space: nowrap;
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        //        flex-direction: row;
+        .list-group-item {
+            //            white-space: nowrap;
         }
     }
 }
