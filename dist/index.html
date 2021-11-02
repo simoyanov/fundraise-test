@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+<!--    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="#">Top navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>-->
+    <main role="main" class="container">
+        
+        
+        <div class="card card-top">
+            <div class="card-body">
+                <h4 class="card-title">Donations</h4>
+            </div>
+            <div class="card-footer search-plate ">
+                <div class="d-md-flex ">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="input-group ">
+                    
+                        <select class="custom-select clear-select" id="inputGroupSelect01">
+                          <option selected>All statuses</option>
+                          <option value="1">Status 1</option>
+                          <option value="2">Status 2</option>
+                          <option value="3">Status 3</option>
+                        </select>
+                      </div>
+                </div>
+                
+              </div>
+              
+        </div>
+        
+        <div class="row">
+            <div class="col order-2 order-lg-1">
+                <div class="card details">
+                    <div class="card-body">
+                        <div class="d-md-flex justify-content-between">
+                            <div>
+                                <div class="details__des">Donation</div>
+                                <div class="details__summary"><span>€20.60 EUR</span> ≈ $22.22 USD</div>
+                            </div>
+                            <div>
+                                <div class="details__id">
+                                    <div class="details__id__title">id</div>
+                                    <div class="details__id__value">DYHY694Y <span class="copy-btn" onclick="copy('DYHY694Y')"></span></div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="d-md-flex details__info">
+                            <div class="details__info__item">
+                                <div class="details__info__item__title">Status</div>
+                                <div class="details__info__item__status success">Success</div>
+                            </div>
+                            <div class="details__info__item">
+                                <div class="details__info__item__title">Supporter</div>
+                                <a href="#">Charlotte Ann</a>
+                            </div>
+                            <div class="details__info__item">
+                                <div class="details__info__item__title">Campaign</div>
+                                <a href="#">Workout for water</a>
+                            </div>
+                            
+                        </div>
+                      </div>
+                      
+                </div>
+        
+                <div class="card tabs">
+                    <div class="card-body">
+                       <div class="tabbable-responsive">
+                <div class="tabbable">
+                       
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="behavior-tab" data-toggle="tab" href="#behavior" role="tab" aria-controls="behavior" aria-selected="true">Behavior</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="appearance-tab" data-toggle="tab" href="#appearance" role="tab" aria-controls="appearance" aria-selected="false">Appearance</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="custom-fields-tab" data-toggle="tab" href="#custom-fields" role="tab" aria-controls="custom-fields" aria-selected="false">Custom Fields</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="questions-tab" data-toggle="tab" href="#questions" role="tab" aria-controls="questions" aria-selected="false">Questions</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="url-control-tab" data-toggle="tab" href="#url-control" role="tab" aria-controls="url-control" aria-selected="false">URL Control</a>
+                              </li>
+                          </ul>
+                           </div>
+                           </div>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="behavior" role="tabpanel" aria-labelledby="behavior-tab">
+                                <form>
+                                    <div class="form-group input-group row">
+                                        <label for="formDesignation">Designation</label>
+        <!--                                <div>-->
+                                            <select class="custom-select full-select" id="formDesignation">
+                                                <option selected value="1">Match Checkout Setting</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                              </select>
+        <!--                                </div>-->
+                                    </div>
+                                    <div class="form-group input-group row currency-group" >
+                                        <label for="formGoal">Goal</label>
+                                        <div>
+                                             
+                                            <input type="text" class="form-control currency-input" aria-label="Amount (to the nearest dollar)" value="" data-inputmask="" default-value="10">
+                                          </div>
+                                          <div>
+                                            <select class="custom-select currency-select" id="formCurrency">
+                                                <option selected value="usd">USD</option>
+                                                <option value="eur">EUR</option>
+                                                
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="formDefaultAmount">Default Amount</label>
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Match Checkout Setting
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                    Customize
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    Allow donor to change default currency
+                                                </label>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group range-group row">
+                                        <label for="formBorderSize">Border size</label>
+                                        <div>
+                                        
+                                        
+                                        <input class="form-control-range" id="formBorderSize" type="range" value="2" min="0" max="3" oninput="formBorderSizeValue.value=value"/>
+                                        
+                                        </div>
+                                        <output id="formBorderSizeValue">2</output>
+                                        <label for="">px</label>
+                                    </div>
+                                    <div class="form-group range-group row">
+                                        <label for="formBorderRadiusRange">Border radius</label>
+                                        
+                                        
+                                        <div>
+                                        
+                                        
+                                        <input class="form-control-range" id="formBorderRadiusRange" type="range" value="15" min="0" max="20" oninput="formBorderRadiusRangeValue.value=value"/>
+                                        
+                                        </div>
+                                        <output id="formBorderRadiusRangeValue">15</output>
+                                        <label for="">px</label>
+                                    </div>
+                                </form>
+        
+                            </div>
+                            <div class="tab-pane fade" id="appearance" role="tabpanel" aria-labelledby="appearance-tab">2</div>
+                            <div class="tab-pane fade" id="custom-fields" role="tabpanel" aria-labelledby="custom-fields-tab">3</div>
+                            <div class="tab-pane fade" id="questions" role="tabpanel" aria-labelledby="questions-tab">4</div>
+                            <div class="tab-pane fade" id="url-control" role="tabpanel" aria-labelledby="url-control-tab">5</div>
+                          </div>
+                    </div>
+                    <div class="card-footer card-footer-yellow">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="" class="btn ">Cancel</button>
+        
+                      </div>
+                      
+                </div>
+            </div>    
+            <div class="col sidebar-menu order-1 order-lg-2">
+                <div class="card" style="">
+                    <div class="list-group list-group-flush">
+                      <a class="list-group-item"><img src="assets/img/repeat.svg" alt="">    Change Amount</a>
+                      <a class="list-group-item"><img src="assets/img/wallet.svg" alt=""> Change Payment Method</a>
+                      <a class="list-group-item"><img src="assets/img/calendar.svg" alt=""> Change Date</a>
+                      <a class="list-group-item"><img src="assets/img/x-circle.svg" alt=""> Cancel Recurring</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
